@@ -44,6 +44,28 @@
         </div>
     </div>
 </body>
+<script>
+    var data = {
+        UserPoolId : _config.cognito.userPoolId,
+        ClientId : _config.cognito.clientId
+    };
+    var userPool = new AmazonCognitoIdentity.CognitoUserPool(data);
+    var cognitoUser = userPool.getCurrentUser();
+
+    window.onload = function() {
+        if (cognitoUser != null) {
+            cognitoUser.getSession(function(err, session) {
+                if (err) {
+                    alert(err);
+                    return;
+                }
+                console.log('Session validity: ' + session.isValid());
+            })
+        } else {
+            window.location.replace('https://runalytics.thijsjung.nl/login.html');
+        }
+    }
+</script>
 <script type="text/javascript" src="static/data_loading.js?version=2.0.5"></script>
 
 </html>
