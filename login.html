@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Runalytics</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Javascript SDKs-->
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+	<script src="js/amazon-cognito-auth.min.js"></script>
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script> 
+	<script src="js/amazon-cognito-identity.min.js"></script>   
+	<script src="js/config.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+            <h1>Runalytics</h1>
+            <div class="row">
+                <form>
+                    <h2>Please sign in</h2>
+                
+                    <input type="text" id="inputUsername"  placeholder="User name" name="username" required autofocus><br>
+                    <input type="password" id="inputPassword"  placeholder="Password" name="password" required><br>
+                    <button type="button" onclick="signInButton()">Sign in</button>
+                
+                </form>
+            </div>
+    </div>
+</body>

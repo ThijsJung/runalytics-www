@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Runalytics!</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj_8Oxk5gWdQa3HNTg3KXkW3CWyVbcUJg&libraries=drawing"></script>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Runalytics</h1>
+        <div class="row">
+            <div class="col-sm-8" id="map"></div>
+            <div class="col-sm-4" id="menu">
+                <div>
+                    <h1>Hi user!</h1>
+                    <p>Please select your run</p>
+
+                    <form id="select_run">
+                        <select id="user_run" onChange=loadGraphs(this.value)></select>
+                    </form>
+                </div>
+                <br>
+                <div>
+                    <button type="button" class="btn">Upload a new run</button>
+                    <button type="button" class="btn">Delete this run</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 graphs" id="pace_chart"></div>
+            <div class="col-sm-4 graphs" id="heart_rate_chart"></div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="static/data_loading.js?version=2.0.5"></script>
+
+</html>
