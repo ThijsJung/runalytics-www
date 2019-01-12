@@ -1,0 +1,17 @@
+#map {
+	height: 400px;
+	width: 70%;
+}
+
+#menu {
+	float: left;
+	padding-left: 10px;
+	width: 30%;
+	height: 400px;
+}
+
+
+.graphs {
+	width: 400px;
+	height: 350px;
+}
